@@ -20,26 +20,20 @@ class Result {
      */
 
     public static int diagonalDifference(List<List<Integer>> arr) {
-   
-   int soma1 =0;
-   int soma2= 0;
-   for (int i= 0; i<arr.size();i++){
-       for (int j= 0; j<arr.size();i++){ 
-           if(i==j){
-               soma1=arr.get(i).get(i);
-           }
-   }
-   
+
+    int somaPrincipal = 0;
+        int somaSecundaria = 0;
+        int n = arr.size();
+
+        for (int i = 0; i < n; i++) {
+            somaPrincipal += arr.get(i).get(i);
+            somaSecundaria += arr.get(i).get(n - 1 - i);
+        }
+
+        return Math.abs(somaPrincipal - somaSecundaria);
+
+
     }
-     for (int i = arr.size(); i > 0;i--){
-       for (int j= 0; j<arr.size();i++){ 
-           if(i==j){
-               soma2=arr.get(i).get(i);
-           }
-   }
-    }
-    
-    return Math.abs(soma1 - soma2);
 
 }
 
@@ -72,5 +66,4 @@ public class Solution {
         bufferedReader.close();
         bufferedWriter.close();
     }
-}
 }

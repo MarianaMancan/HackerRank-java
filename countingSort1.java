@@ -9,7 +9,8 @@ import java.util.regex.*;
 import java.util.stream.*;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toList;
-
+import java.util.List;
+import java.util.ArrayList;
 class Result {
 
 
@@ -27,7 +28,7 @@ class Result {
     }
 }
 
-public class Solution {
+public class countingSort1 {
     public static void main(String[] args) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
